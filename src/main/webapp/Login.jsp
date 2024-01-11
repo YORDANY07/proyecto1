@@ -10,6 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tu Página JSP</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             margin: 0;
@@ -20,7 +21,7 @@
 
         .barra-lateral {
              flex: 1;
-            background-color: #2ecc71;
+            background-image: linear-gradient(to right,#2F51F7, #41EFF9);
             padding: 20px;
             
         }
@@ -30,18 +31,65 @@
             width: 70%;
             height: 100%;
         }
+        .Title {
+            text-align: center;
+            color:#FF9900;
+            font-family: initial;
+            font-style: italic; 
+            font-weight: bold;
+           font-size: 70px;
+        }
+        .subtitle {
+            margin-left: 30px;
+            font-weight: bold;
+            font-size: 40px;
+        }
+        .labels {
+            font-family: Arial;
+            font-size: 24px;
+        }
+        
 
 
     </style>
 </head>
 <body>
     <div class="contenido-principal">
+        <br>
         <div>
-            <h1>SIBAJA'S RESTAURANT</h1>
+            <h1 class="Title">SIBAJA'S RESTAURANT</h1>
         </div>
-        <div>
-            <h2>Iniciar Sesión</h2>
+       <br><br><br>
+       <div>
+           <h2 class="subtitle">Iniciar Sesión</h2>
         </div>
+         <br>
+         <div style="margin-left: 30px; ">
+         <form method="post" action="loginValidation.jsp">
+                <div class="form-group">
+                    <label class="labels">Usuario:</label>
+                    <input type="email" class="form-control" name="email" required Style ="width: 50%;" >
+                </div>
+                <div class="form-group">
+                    <label class="labels">Contraseña:</label>
+                    <input type="password" class="form-control" name="password" required Style ="width: 50%;">
+                </div>
+             <div style="float: left">
+                 <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+             </div>
+                
+                <div Style ="display: inline-block; margin-left: 10px; width: 70%; ">
+                    <select class="form-control" name="txtTypeEmploye" required Style ="width: 30%; margin-top: 0px">
+                            <option value="">Selecciona una opción</option>
+                            <option value="Admin">Administrador</option>
+                            <option value="Waiter">Mesero</option>
+                            <option value="Bartender">Bartender</option>
+                            <option value="Chef">Chef</option>
+                        </select>
+                </div>
+                </div>
+
+            </form>
         
 
 
